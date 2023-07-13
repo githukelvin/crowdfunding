@@ -12,7 +12,7 @@ import Button from '../components/Button.astro'
         <div class="img">
             <img src="../images/logo-mastercraft.svg" alt="mastercraft svg">
         </div>
-        <div class="inners">
+        <div class="inners common">
              
         <h1>Mastercraft Bamboo Monitor Riser</h1>
         <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
@@ -25,8 +25,46 @@ import Button from '../components/Button.astro'
         </div>
         </div>
     </div>
+
+    <div class="top second">
+        <div class="numbers common">
+            <div class="all">
+                <div class="inner">
+                    <h1>$89,914</h1>
+                    <p>of $100,000 backed</p>
+                </div>
+                <div class="inner">
+                    <h1>5,007</h1>
+                    <p>total backers</p>
+                </div>
+                <div class="inner">
+                    <h1>56</h1>
+                    <p>days left</p>
+                </div>
+               
+            </div>
+             <div class='range'>
+                    <div class="Arange"></div>
+            </div>
+        </div>
         
-        <Card/>
+    </div>
+       <div class="top third">
+         <div class="center common">
+            <h2>About this project</h2>
+                 <p>The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
+                to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve 
+                your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</p>
+                <p>Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
+                to allow notepads, pens, and USB sticks to be stored under the stand.</p>
+            <div class="divs">
+                <Card/>
+                <Card/>
+                <Card/>
+            </div>
+         </div> 
+           
+    </div>
     </div>
    </div>
 </main>
@@ -38,6 +76,13 @@ import Button from '../components/Button.astro'
         margin-top: -5.75em;
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
+        display: flex;
+        flex-direction:column;
+        gap:1.5em
+    }
+    .common{
+        width:min(100%,87%);
+        margin-inline:auto;
     }
     .img{
         width:fit-content;
@@ -46,6 +91,7 @@ import Button from '../components/Button.astro'
          top: -1.75em;
          z-index:23;
     }
+   
     .top{
         border:1px solid rgba(130, 130, 130,.3);
         border-radius: 10px;
@@ -55,8 +101,7 @@ import Button from '../components/Button.astro'
 
     }
     .inners{
-        width:min(100%,87%);
-        margin-inline:auto;
+        
 
         h1,p{
             text-align: center;
@@ -98,5 +143,57 @@ import Button from '../components/Button.astro'
             padding-right:1.7em;
             
         }
+    }
+    .second{
+        padding-block:3em;
+    }
+     .top{
+        
+        .numbers{
+            
+            .all{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap:3em;
+                
+
+            .inner{
+                display: flex;
+                flex-direction: column;
+                gap:1em;
+                &:not(:last-child){
+                    border-right:1px solid rgba(130, 130, 130,.3);
+                    
+                }
+                h1{
+                    font-family: 'bold';
+                    color:#000;
+                    font-size:2em;
+                    line-height: 1;
+                }
+                p{
+                    line-height: 1;
+                    font-family: 'regular';
+                    font-size: .95em;
+                }
+            }
+            
+        }
+        .range{
+                margin-top:2.4em;
+                height:13px;
+                border-radius:20px;
+                width:100%;
+                background: rgba(122, 122, 122,.1);
+                .Arange{
+                    width:78%;
+                    background: hsl(176, 50%, 47%);
+                    height:100%;
+                    border-radius:20px;
+                }
+         }
+        }
+
+        
     }
 </style>
