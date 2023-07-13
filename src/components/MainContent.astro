@@ -7,11 +7,13 @@ import Button from '../components/Button.astro'
 <main>
    <div class="container">
      <div class="content">
+        
+       <div class="top">
         <div class="img">
             <img src="../images/logo-mastercraft.svg" alt="mastercraft svg">
         </div>
-       <div class="top">
-         
+        <div class="inners">
+             
         <h1>Mastercraft Bamboo Monitor Riser</h1>
         <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
         <div class="btns">
@@ -20,6 +22,7 @@ import Button from '../components/Button.astro'
                 <img src="../images/icon-bookmark.svg" alt="bookmark icon">
                 <p>Bookmark</p>
             </div>
+        </div>
         </div>
     </div>
         
@@ -30,7 +33,6 @@ import Button from '../components/Button.astro'
 <style lang="scss">
     .content{
         width:min(100%,50.7%);
-        background: #fff;
         margin-inline:auto;
         height: 500px;
         margin-top: -5.75em;
@@ -41,22 +43,31 @@ import Button from '../components/Button.astro'
         width:fit-content;
          margin-inline: auto;
          position: relative;
-         top: -1.7em;
+         top: -1.75em;
          z-index:23;
     }
     .top{
+        border:1px solid rgba(130, 130, 130,.3);
+        border-radius: 10px;
+        width:100%;
+        background:#fff;
+        padding-bottom: 3em;
+
+    }
+    .inners{
         width:min(100%,87%);
         margin-inline:auto;
+
         h1,p{
             text-align: center;
         }
         h1{
             font-family:'bold';
-            font-size:1.7em;
+            font-size:1.75em;
             position: relative;
-            // top:-3px;
+            top:-3px;
             line-height: 1;
-            margin-bottom:.7em;
+            margin-bottom:.65em;
         }
         p{
             font-family: 'medium';
