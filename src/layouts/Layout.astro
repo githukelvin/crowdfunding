@@ -13,14 +13,19 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 		<meta name="generator" content={Astro.generator} />
 		<!-- link to css -->
-		<link href="../public/styles.css" rel="stylesheet"/>
+		<link href="../styles.css" rel="stylesheet"/>
+		<!-- link to fonts -->
+		<link rel="preload" href="../fonts/Commissioner-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="../fonts/Commissioner-Medium.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="../fonts/Commissioner-Thin.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="../fonts/Commissioner-Bold.woff2" as="font" type="font/woff2" crossorigin>
 		<title>{title}</title>
 	</head>
 	<body>
-		<NavBar/>
+		<NavBar/> 
 		<slot/>
 	</body>
 </html>

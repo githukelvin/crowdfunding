@@ -8,15 +8,46 @@
     border:none;
     font-size: 1rem;
 }
-body{
+@font-face {
+    font-family: 'regular';
+    src: url('../fonts/Commissioner-Regular.woff2') format('woff2'),
+        url('../fonts/Commissioner-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'medium';
+    src: url('../fonts/Commissioner-Medium.woff2') format('woff2'),
+        url('../fonts/Commissioner-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'thin';
+    src: url('../fonts/Commissioner-Thin.woff2') format('woff2'),
+        url('../fonts/Commissioner-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url('../fonts/Commissioner-Bold.woff2') format('woff2'),
+        url('../fonts/Commissioner-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+body{
 }
 .container{
     width:min(100%,1440px);
     margin-inline:auto;
-
-
-
 }
 header{
     background-image: url("../images/image-hero-desktop.jpg");
@@ -40,4 +71,8 @@ ul{
     justify-content:space-between;
     align-items:center;
     gap:2em;
+    
+}
+ul li a{
+    font-family: 'regular';
 }
