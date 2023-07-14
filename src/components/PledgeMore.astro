@@ -3,20 +3,36 @@ import PledgeCard from "./PledgeCard.vue";
 
 ---
 <div class="modal">
-    <div class="mcontent">
-        <div class="mheader">
-        <div class=".close"></div>
-            <h2>Back this project</h2>
-            <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
-        </div>
-        <div class="alldivs">
-            <PledgeCard client:visible/>
-            <PledgeCard client:visible/>
-            <PledgeCard client:visible/>
-            <PledgeCard client:visible/>
+    <div class="all">
+        <div class="mcontent ">
+            <div class="mheader">
+                <div class="close"></div>
+                  <h2>Back this project</h2>
+                  <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+            </div>
+            <div class="alldivs">
+                    <PledgeCard client:visible/>
+            </div>
         </div>
     </div>
 </div>
 <style lang="scss" is:inline>
+  
 
+    .mcontent{
+        width:min(100%,46%);
+        margin-top:11.5em;
+        background-color: white;
+        border-radius: 10px;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        padding:3em;
+    }
+    .mheader{
+        close{}
+        h2{}
+        p{}
+
+    }
 </style>
