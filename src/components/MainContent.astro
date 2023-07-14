@@ -8,7 +8,7 @@ import Button from '../components/Button.astro'
    <div class="container">
      <div class="content">
         
-       <div class="top">
+       <div class="top der">
         <div class="img">
             <img src="../images/logo-mastercraft.svg" alt="mastercraft svg">
         </div>
@@ -26,7 +26,7 @@ import Button from '../components/Button.astro'
         </div>
     </div>
 
-    <div class="top second">
+    <div class="top der second">
         <div class="numbers common">
             <div class="all">
                 <div class="inner">
@@ -49,18 +49,41 @@ import Button from '../components/Button.astro'
         </div>
         
     </div>
-       <div class="top third">
+       <div class="top der third">
          <div class="center common">
             <h2>About this project</h2>
-                 <p>The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
+                 <p class="ptop">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
                 to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve 
                 your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</p>
-                <p>Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
+                <p class='pbot'>Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
                 to allow notepads, pens, and USB sticks to be stored under the stand.</p>
             <div class="divs">
-                <Card/>
-                <Card/>
-                <Card/>
+                <Card title='Bamboo stand'
+                lefts='let'
+                rem='101'
+                content="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list."
+                urltext='Pledge $25 or more'
+                >
+                    <Button text="Select Reward"/>
+                </Card>
+                <Card title='Black Edition Stand'
+                lefts='let'
+                rem='64'
+                content=" You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included."
+                urltext='Pledge $75 or more'
+                >
+                    <Button text="Select Reward"/>
+                </Card>
+                <Card title='Mahogany Special Edition'
+                lefts='let'
+                rem='0'
+                content="You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included."
+                urltext='Pledge $200 or more'
+                >
+                    <Button text="Out of Stock"/>
+                </Card>
+                
+
             </div>
          </div> 
            
@@ -68,10 +91,12 @@ import Button from '../components/Button.astro'
     </div>
    </div>
 </main>
-<style lang="scss">
+<style lang="scss" >
+    .der{
+        padding-bottom: 3em;
+
+    }
     .content{
-        width:min(100%,50.7%);
-        margin-inline:auto;
         height: 500px;
         margin-top: -5.75em;
         border-top-right-radius: 10px;
@@ -80,10 +105,7 @@ import Button from '../components/Button.astro'
         flex-direction:column;
         gap:1.5em
     }
-    .common{
-        width:min(100%,87%);
-        margin-inline:auto;
-    }
+   
     .img{
         width:fit-content;
          margin-inline: auto;
@@ -92,14 +114,7 @@ import Button from '../components/Button.astro'
          z-index:23;
     }
    
-    .top{
-        border:1px solid rgba(130, 130, 130,.3);
-        border-radius: 10px;
-        width:100%;
-        background:#fff;
-        padding-bottom: 3em;
-
-    }
+   
     .inners{
         
 
@@ -195,5 +210,38 @@ import Button from '../components/Button.astro'
         }
 
         
+    }
+    .third{
+        
+        .center{
+            display: flex;
+            flex-direction: column;
+            gap:1.5em;
+            h2{
+                padding-top:2.4em;
+                line-height: 1;
+                font-family: 'bold';
+                font-size:1.25em;
+            }
+            .ptop{
+                margin-top:.73em;
+
+            }
+            p{
+                font-family: 'regular';
+                font-size:1em;
+                line-height: 1.9;
+                color: hsl(0, 0%, 48%);
+            }
+            .pbot{
+                margin-top:.42em;
+            }
+            .divs{
+                margin-top:.9em;
+                display: flex;
+                flex-direction: column;
+                gap:1.5em;
+            }
+        }
     }
 </style>

@@ -58,6 +58,7 @@ header{
     background-size: cover;
     height: 400px;
 }
+
 .navBar{
     width:min(100%,77%);
     margin-inline:auto;
@@ -84,4 +85,19 @@ ul li a{
     color:#fff;
     font-size: .83em;
     text-transform: capitalize;
+}
+ .top{
+        border:1px solid rgba(130, 130, 130,.3);
+        border-radius: 10px;
+        width:100%;
+        background:#fff;
+
+    }
+.content{
+    width:min(100%,50.7%);
+    margin-inline: auto;
+}
+.common{
+    width:min(100%,87%);
+    margin-inline:auto;
 }
