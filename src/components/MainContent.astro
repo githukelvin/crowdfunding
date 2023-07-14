@@ -17,7 +17,7 @@ import Button from '../components/Button.astro'
         <h1>Mastercraft Bamboo Monitor Riser</h1>
         <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
         <div class="btns">
-            <Button text="Back this project"/>
+            <Button id="" class="" text="Back this project"/>
             <div class="bookmark">
                 <img src="../images/icon-bookmark.svg" alt="bookmark icon">
                 <p>Bookmark</p>
@@ -58,29 +58,29 @@ import Button from '../components/Button.astro'
                 <p class='pbot'>Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
                 to allow notepads, pens, and USB sticks to be stored under the stand.</p>
             <div class="divs">
-                <Card title='Bamboo stand'
+                <Card id='' title='Bamboo Stand'
                 lefts='let'
                 rem='101'
                 content="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list."
                 urltext='Pledge $25 or more'
                 >
-                    <Button text="Select Reward"/>
+                    <Button id="font1" class="" text="Select Reward"/>
                 </Card>
-                <Card title='Black Edition Stand'
+                <Card id='' title='Black Edition Stand'
                 lefts='let'
                 rem='64'
                 content=" You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included."
                 urltext='Pledge $75 or more'
                 >
-                    <Button text="Select Reward"/>
+                    <Button id="font1" class="" text="Select Reward"/>
                 </Card>
-                <Card title='Mahogany Special Edition'
+                <Card id="buz" title='Mahogany Special Edition'
                 lefts='let'
                 rem='0'
                 content="You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included."
                 urltext='Pledge $200 or more'
                 >
-                    <Button text="Out of Stock"/>
+                    <Button id="font" class="dark" text="Out of Stock"/>
                 </Card>
                 
 
@@ -92,6 +92,7 @@ import Button from '../components/Button.astro'
    </div>
 </main>
 <style lang="scss" >
+   
     .der{
         padding-bottom: 3em;
 
@@ -120,6 +121,8 @@ import Button from '../components/Button.astro'
 
         h1,p{
             text-align: center;
+            width:fit-content;
+            margin-inline:auto;
         }
         h1{
             font-family:'bold';
@@ -241,7 +244,24 @@ import Button from '../components/Button.astro'
                 display: flex;
                 flex-direction: column;
                 gap:1.5em;
+              
+                   
             }
         }
     }
+      #font{
+        font-size: .88em;
+        padding-block: 1.17em;
+    }
+    #font1{
+        font-size: .85em;
+        padding-block: 1.2em;
+    }
+ 
+    .dark{
+        background-color: hsl(0, 0%, 48%);
+      
+    }
+    
+    
 </style>

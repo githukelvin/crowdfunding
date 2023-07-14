@@ -2,13 +2,16 @@
 // export interface
 interface Props{
     text:string
+    class:string
+    id:string
+    
 }
-const {text } =Astro.props;
+const {text,class:className, id:className2 } =Astro.props;
 ---
 
-<button>{text}</button>
+<button id={className2} class={className}>{text}</button>
 
-<style is:inline>
+<style lang="scss"is:inline>
     button{
         background: hsl(176, 50%, 47%);
         border-radius: 30px;
@@ -16,6 +19,9 @@ const {text } =Astro.props;
         color: white;
         font-family:'bold';
         cursor: pointer;
+        &:hover{
+            background: hsl(176, 72%, 28%);
+        }
     }
     
 </style>

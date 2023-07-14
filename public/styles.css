@@ -45,7 +45,7 @@
 }
 
 body{
-    background: rgba(122, 122, 122,.01);
+    background: rgba(54, 54, 54, 0.031);
 }
 .container{
     width:min(100%,1440px);
@@ -87,7 +87,7 @@ ul li a{
     text-transform: capitalize;
 }
  .top{
-        border:1px solid rgba(130, 130, 130,.3);
+        border:1px solid rgba(130, 130, 130,.5);
         border-radius: 10px;
         width:100%;
         background:#fff;
@@ -100,4 +100,8 @@ ul li a{
 .common{
     width:min(100%,87%);
     margin-inline:auto;
+}
+#buz{
+    opacity:.5;
+    pointer-events: none;
 }

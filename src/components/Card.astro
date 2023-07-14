@@ -6,11 +6,13 @@ export interface Props{
     urltext:string;
     rem:string;
     lefts:string;
+    id:string;
 }
-const {title,urltext,content,rem,lefts}=Astro.props;
+const {title,urltext,content,rem,lefts,id:className3}=Astro.props;
 ---
-<div class="top card">
-    <div class="comm">
+
+<div  class="top card" id={className3}  >
+    <div class="comm" >
         <div class="ontop">
             <h2>{title}</h2>
             <a href="">{urltext}</a>
@@ -59,7 +61,7 @@ const {title,urltext,content,rem,lefts}=Astro.props;
     h2{
             font-family: 'bold';
             font-size:1.1em;
-            line-height:1;
+            line-height:1.05;
         }
     a{
         color:hsl(176, 50%, 47%);
