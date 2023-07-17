@@ -88,6 +88,21 @@ const {
     font-family: "regular";
     color: hsl(0, 0%, 48%);
   }
+  @media screen and (min-width: 1000px) {
+    .comm {
+    width: min(100%, 90%);
+    margin-inline: auto;
+    padding: 2.4em 0 1.9em 0;
+
+    .bot,
+    .ontop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  }
   @media screen and (max-width: 480px) {
     .comm {
       .bot,
