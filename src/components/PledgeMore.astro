@@ -1,38 +1,114 @@
 ---
 import PledgeCard from "./PledgeCard.vue";
-
+export interface Props {
+  id: string;
+  id2: string;
+}
+const { id, id2 } = Astro.props;
 ---
-<div class="modal">
-    <div class="all">
-        <div class="mcontent ">
-            <div class="mheader">
-                <div class="close"></div>
-                  <h2>Back this project</h2>
-                  <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
-            </div>
-            <div class="alldivs">
-                    <PledgeCard client:visible/>
-            </div>
-        </div>
+
+<div class="modal" id={id}>
+  <div class="all">
+    <div class="mcontent">
+      <div class="mheader">
+        <div id={id2} class="close"></div>
+        <h2>Back this project</h2>
+        <p>
+          Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
+          the world?
+        </p>
+      </div>
+      <div class="alldivs">
+        <PledgeCard client:visible />
+      </div>
     </div>
+  </div>
 </div>
+<script></script>
 <style lang="scss" is:inline>
+  @mixin responsive($size) {
+  }
+  .mcontent {
+    width: min(100%, 48%);
+    // margin-top:11.5em;
+    background-color: white;
+    border-radius: 10px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 3.2em;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @media screen and (max-width: 1200px) {
+    .mcontent {
+      width: min(100%, 75%);
+      top: 90%;
+      transform: translate(-50%, -50%);
+      padding: 1em;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    .mcontent {
+      width: min(100%, 90%);
+      top: 90%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+
+  .mheader {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    position: relative;
+    .close {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      background-image: url("../images/icon-close-modal.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      right: -30px;
+      top: -20px;
+      cursor: pointer;
+    }
+  }
+  .mheader h2 {
+    font-family: "bold";
+    margin-top: -0.1em;
+    font-size: 1.5em;
+  }
+  .mheader p {
+    font-family: "medium";
+    margin-top: -0.6em;
+    margin-bottom: 2.39em;
+    color: hsl(0, 0%, 48%);
+  }
+    @media screen and (max-width: 850px) {
+    .mcontent {
+      width: min(100%, 90%);
+      top: 90%;
+      transform: translate(-50%, -50%);
+    }
+   .mheader .close{
+    right:0px;
+    top:0px;
+   }
+  }
+  @media screen and (max-width: 650px) {
+    .mcontent {
+      width: min(100%, 90%);
+      top: 100%;
+      transform: translate(-50%, -50%);
+    }
   
-
-    .mcontent{
-        width:min(100%,46%);
-        margin-top:11.5em;
-        background-color: white;
-        border-radius: 10px;
-        margin-inline: auto;
-        display: flex;
-        flex-direction: column;
-        padding:3em;
-    }
+  }
+  @media screen and (max-width:480px){
     .mheader{
-        close{}
-        h2{}
-        p{}
-
+        flex-direction:column; 
     }
+  }
 </style>

@@ -1,121 +1,157 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    outline: none;
-    list-style: none;
-    text-decoration:none;
-    border:none;
-    font-size: 1rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  font-size: 1rem;
 }
 @font-face {
-    font-family: 'regular';
-    src: url('../fonts/Commissioner-Regular.woff2') format('woff2'),
-        url('../fonts/Commissioner-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'medium';
-    src: url('../fonts/Commissioner-Medium.woff2') format('woff2'),
-        url('../fonts/Commissioner-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: "regular";
+  src: url("../fonts/Commissioner-Regular.woff2") format("woff2"),
+    url("../fonts/Commissioner-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'thin';
-    src: url('../fonts/Commissioner-Thin.woff2') format('woff2'),
-        url('../fonts/Commissioner-Thin.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
+  font-family: "medium";
+  src: url("../fonts/Commissioner-Medium.woff2") format("woff2"),
+    url("../fonts/Commissioner-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'bold';
-    src: url('../fonts/Commissioner-Bold.woff2') format('woff2'),
-        url('../fonts/Commissioner-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "thin";
+  src: url("../fonts/Commissioner-Thin.woff2") format("woff2"),
+    url("../fonts/Commissioner-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
 }
 
-body{
-    background: rgba(54, 54, 54, 0.031);
-}
-.container{
-    width:min(100%,1440px);
-    margin-inline:auto;
-}
-header{
-    background-image: url("../images/image-hero-desktop.jpg");
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    height: 400px;
+@font-face {
+  font-family: "bold";
+  src: url("../fonts/Commissioner-Bold.woff2") format("woff2"),
+    url("../fonts/Commissioner-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
-.navBar{
-    width:min(100%,77%);
-    margin-inline:auto;
-    display: flex;
-    flex-direction:row;
-    justify-content:space-between;
-    align-items:center; 
-    height:120px;
+body {
+  background: rgba(54, 54, 54, 0.031);
 }
-ul{
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    align-items:center;
-    gap:2em;
-    
+.container {
+  width: min(100%, 1440px);
+  margin-inline: auto;
 }
-ul li{
-    position: relative;
-    top: -2px;
+header {
+  background-image: url("../images/image-hero-desktop.jpg");
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 400px;
 }
-ul li a{
-    font-family: 'regular';
-    color:#fff;
-    font-size: .83em;
-    text-transform: capitalize;
-}
- .top{
-        border:1px solid rgba(130, 130, 130,.5);
-        border-radius: 10px;
-        width:100%;
-        background:#fff;
 
-    }
-.content{
-    width:min(100%,50.7%);
-    margin-inline: auto;
+.navBar {
+  width: min(100%, 77%);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
 }
-.common{
-    width:min(100%,87%);
-    margin-inline:auto;
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
 }
-#buz{
-    opacity:.5;
-    pointer-events: none;
+ul li {
+  position: relative;
+  top: -2px;
+}
+ul li a {
+  font-family: "regular";
+  color: #fff;
+  font-size: 0.83em;
+  text-transform: capitalize;
+}
+.top {
+  border: 1px solid rgba(130, 130, 130, 0.5);
+  border-radius: 10px;
+  width: 100%;
+  background: #fff;
+}
+.content {
+  width: min(100%, 50.7%);
+  margin-inline: auto;
+}
+
+#buz {
+  opacity: 0.5;
+  pointer-events: none;
+}
+#buz .low {
+  display: none;
+}
+#buz hr {
+  display: none;
+}
+.modal,
+.modalt {
+  display: none; 
+  position: fixed;
+  z-index: 999;
+  /* padding-top: 100px; Location of the box */
+ inset: 0;
+  width: 100%; /* Full width */
+   height: 100%;
+   
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 .modal{
-    /*Hidden by default */
-    /* display: none;  */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    /* padding-top: 100px; Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ height: 100%;
+  overflow: auto;
 }
+.act {
+  display: flex;
+}
+.hide {
+  display: none;
+}
+.block {
+  display: block;
+}
+@media screen and (max-width:1200px) {
+
+    .content{
+        width:min(100%,65%)
+    }
+}
+@media screen and (max-width:850px) {
+
+    .content{
+        width:min(100%,90%)
+    }
+    .navBar{
+        width: min(100%,95%);
+    }
+}
+  @media screen and (max-width:635px){
+  .content{
+        width:min(100%,95%)
+    }
+  }
+    @media screen and (max-width:480px){
+    
+  }

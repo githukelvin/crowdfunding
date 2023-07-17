@@ -1,88 +1,113 @@
 ---
-import Button from './Button.astro';
-export interface Props{
-    title:string;
-    content:string;
-    urltext:string;
-    rem:string;
-    lefts:string;
-    id:string;
+import Button from "./Button.astro";
+export interface Props {
+  title: string;
+  content: string;
+  urltext: string;
+  rem: string;
+  lefts: string;
+  id: string;
+  id3: string;
 }
-const {title,urltext,content,rem,lefts,id:className3}=Astro.props;
+const {
+  title,
+  urltext,
+  content,
+  rem,
+  lefts,
+  id: className3,
+  id3,
+} = Astro.props;
 ---
 
-<div  class="top card" id={className3}  >
-    <div class="comm" >
-        <div class="ontop">
-            <h2>{title}</h2>
-            <a href="">{urltext}</a>
-        </div>
-        <p class="mid">{content}</p>
-        <div class="bot">
-            <h1>{rem}
-                <span>{lefts}</span>
-               
-            </h1>
-             <slot/>
-        </div>
+<div class="top card" id={className3}>
+  <div class="comm">
+    <div class="ontop">
+      <h2>{title}</h2>
+      <p class="hre" id={id3}>{urltext}</p>
     </div>
+    <p class="mid">{content}</p>
+    <div class="bot">
+      <h1>
+        {rem}
+        <span>{lefts}</span>
+      </h1>
+      <slot />
+    </div>
+  </div>
 </div>
+<script></script>
 <style lang="scss" is:inline>
-    
-    .card{
-        
-        width:100%;
-        
-    }
-    .comm{
-    width:min(100%,90%);
-    margin-inline:auto;
+  .card {
+    width: 100%;
+  }
+  .comm {
+    width: min(100%, 90%);
+    margin-inline: auto;
     padding: 2.4em 0 1.9em 0;
-    .ontop{
-       
-    }
-   
-    .bot,.ontop{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        
-    }
-    }
-     .mid{
-        margin-top:1.7em;
-        line-height: 1.9;
-        font-size: 1em;
-        font-family:'medium';
-        color:hsl(0, 0%, 48%);
-            
-    }
-    h2{
-            font-family: 'bold';
-            font-size:1.1em;
-            line-height:1.05;
-        }
-    a{
-        color:hsl(176, 50%, 47%);
-        font-family: 'medium';
-        font-size:.935em;
-        line-height: 1;
 
+    .bot,
+    .ontop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
     }
-    .bot{
-        margin-top:1.35em;
-    }
-    h1{
-            display: flex;
-            font-family: 'bold';
-            flex-direction: row;
-            align-items: center;
-            font-size: 2em;
-            gap:.3em;
+  }
+  .mid {
+    margin-top: 1.7em;
+    line-height: 1.9;
+    font-size: 1em;
+    font-family: "medium";
+    color: hsl(0, 0%, 48%);
+  }
+  h2 {
+    font-family: "bold";
+    font-size: 1.1em;
+    line-height: 1.05;
+  }
+  .hre {
+    color: hsl(176, 50%, 47%);
+    font-family: "medium";
+    font-size: 0.935em;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .bot {
+    margin-top: 1.35em;
+  }
+  h1 {
+    display: flex;
+    font-family: "bold";
+    flex-direction: row;
+    align-items: center;
+    font-size: 2em;
+    gap: 0.3em;
+  }
+  span {
+    font-family: "regular";
+    color: hsl(0, 0%, 48%);
+  }
+  @media screen and (max-width: 480px) {
+    .comm {
+      .bot,
+      .ontop {
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 1em;
+      }
+      .ontop {
+        h2,
+        p {
+          text-align: left;
         }
-        span{
-                font-family: 'regular';
-                color:hsl(0, 0%, 48%);
-            }
+      }
+      h1 {
+        font-size: 2.1em;
+      }
+    }
+    .mid {
+      font-size: 0.9em;
+    }
+  }
 </style>

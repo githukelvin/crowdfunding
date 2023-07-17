@@ -1,267 +1,352 @@
 ---
-import Card from '../components/Card.astro'
-import Button from '../components/Button.astro'
+import Card from "../components/Card.astro";
+import Button from "../components/Button.astro";
+import Thanks from "./Thanks.astro";
+import PledgeMore from "./PledgeMore.astro";
 
 // const { text } =Astro.props;
 ---
+
 <main>
-   <div class="container">
-     <div class="content">
-        
-       <div class="top der">
+  <div class="container">
+    <div class="content">
+      <div class="top der">
         <div class="img">
-            <img src="../images/logo-mastercraft.svg" alt="mastercraft svg">
+          <img src="../images/logo-mastercraft.svg" alt="mastercraft svg" />
         </div>
         <div class="inners common">
-             
-        <h1>Mastercraft Bamboo Monitor Riser</h1>
-        <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
-        <div class="btns">
-            <Button id="" class="" text="Back this project"/>
+          <h1>Mastercraft Bamboo Monitor Riser</h1>
+          <p>
+            A beautiful & handcrafted monitor stand to reduce neck and eye
+            strain.
+          </p>
+          <div class="btns">
+            <Button id="book" class="" text="Back this project" />
             <div class="bookmark">
-                <img src="../images/icon-bookmark.svg" alt="bookmark icon">
-                <p>Bookmark</p>
+              <img src="../images/icon-bookmark.svg" alt="bookmark icon" />
+              <p>Bookmark</p>
             </div>
+          </div>
         </div>
-        </div>
-    </div>
+      </div>
 
-    <div class="top der second">
+      <div class="top der second">
         <div class="numbers common">
-            <div class="all">
-                <div class="inner">
-                    <h1>$89,914</h1>
-                    <p>of $100,000 backed</p>
-                </div>
-                <div class="inner">
-                    <h1>5,007</h1>
-                    <p>total backers</p>
-                </div>
-                <div class="inner">
-                    <h1>56</h1>
-                    <p>days left</p>
-                </div>
-               
+          <div class="all">
+            <div class="inner">
+              <h1>$89,914</h1>
+              <p>of $100,000 backed</p>
             </div>
-             <div class='range'>
-                    <div class="Arange"></div>
+            <div class="inner">
+              <h1>5,007</h1>
+              <p>total backers</p>
             </div>
+            <div class="inner">
+              <h1>56</h1>
+              <p>days left</p>
+            </div>
+          </div>
+          <div class="range">
+            <div class="Arange"></div>
+          </div>
         </div>
-        
+      </div>
+      <div class="top der third">
+        <div class="center common">
+          <h2>About this project</h2>
+          <p class="ptop">
+            The Mastercraft Bamboo Monitor Riser is a sturdy and stylish
+            platform that elevates your screen to a more comfortable viewing
+            height. Placing your monitor at eye level has the potential to
+            improve your posture and make you more comfortable while at work,
+            helping you stay focused on the task at hand.
+          </p>
+          <p class="pbot">
+            Featuring artisan craftsmanship, the simplicity of design creates
+            extra desk space below your computer to allow notepads, pens, and
+            USB sticks to be stored under the stand.
+          </p>
+          <div class="divs">
+            <Card
+              id=""
+              id3="mor"
+              title="Bamboo Stand"
+              lefts="let"
+              rem="101"
+              content="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list."
+              urltext="Pledge $25 or more"
+            >
+              <Button id="font1" class="" text="Select Reward" />
+            </Card>
+            <Card
+              id=""
+              id3="mor"
+              title="Black Edition Stand"
+              lefts="let"
+              rem="64"
+              content=" You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included."
+              urltext="Pledge $75 or more"
+            >
+              <Button id="font1" class="" text="Select Reward" />
+            </Card>
+            <Card
+              id="buz"
+              id3="mor"
+              title="Mahogany Special Edition"
+              lefts="let"
+              rem="0"
+              content="You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included."
+              urltext="Pledge $200 or more"
+            >
+              <Button id="font" class="dark" text="Out of Stock" />
+            </Card>
+          </div>
+        </div>
+      </div>
     </div>
-       <div class="top der third">
-         <div class="center common">
-            <h2>About this project</h2>
-                 <p class="ptop">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
-                to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve 
-                your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</p>
-                <p class='pbot'>Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
-                to allow notepads, pens, and USB sticks to be stored under the stand.</p>
-            <div class="divs">
-                <Card id='' title='Bamboo Stand'
-                lefts='let'
-                rem='101'
-                content="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list."
-                urltext='Pledge $25 or more'
-                >
-                    <Button id="font1" class="" text="Select Reward"/>
-                </Card>
-                <Card id='' title='Black Edition Stand'
-                lefts='let'
-                rem='64'
-                content=" You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included."
-                urltext='Pledge $75 or more'
-                >
-                    <Button id="font1" class="" text="Select Reward"/>
-                </Card>
-                <Card id="buz" title='Mahogany Special Edition'
-                lefts='let'
-                rem='0'
-                content="You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included."
-                urltext='Pledge $200 or more'
-                >
-                    <Button id="font" class="dark" text="Out of Stock"/>
-                </Card>
-                
-
-            </div>
-         </div> 
-           
-    </div>
-    </div>
-   </div>
+  </div>
 </main>
-<style lang="scss" >
-   
-    .der{
-        padding-bottom: 3em;
+<Thanks id="show" />
+<PledgeMore id2="hide" id="pledge" />
+<script>
+  let btns = document.querySelectorAll("#font1");
+  let show = document.querySelector("#show");
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      show.style.display = "flex";
+    });
+  });
+  let btn = document.querySelector("#center");
+  let modal = document.querySelector(".modalt");
+  btn.addEventListener("click", () => {
+    show.style.display = "none";
+    modal.style.display = "none";
+  });
+  let more = document.querySelectorAll("#mor");
+  let pledge = document.querySelector("#pledge");
 
+  more.forEach((mo) => {
+    mo.addEventListener("click", () => {
+      pledge.classList.add("block");
+    });
+  });
+  let close = document.querySelector("#hide");
+  close.addEventListener("click", () => {
+    pledge.classList.toggle("block");
+  });
+</script>
+<style lang="scss">
+  @mixin responsive($size) {
+    @media screen and (max-width: $size) {
+      @content;
     }
-    .content{
-        height: 500px;
-        margin-top: -5.75em;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-        display: flex;
-        flex-direction:column;
-        gap:1.5em
-    }
-   
-    .img{
-        width:fit-content;
-         margin-inline: auto;
-         position: relative;
-         top: -1.75em;
-         z-index:23;
-    }
-   
-   
-    .inners{
-        
+  }
+  .der {
+    padding-bottom: 3em;
+    padding-inline: 2.9em;
+  }
+  .content {
+    height: 500px;
+    margin-top: -5.75em;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
 
-        h1,p{
-            text-align: center;
-            width:fit-content;
-            margin-inline:auto;
-        }
-        h1{
-            font-family:'bold';
-            font-size:1.75em;
-            position: relative;
-            top:-3px;
+  .img {
+    width: fit-content;
+    margin-inline: auto;
+    position: relative;
+    top: -1.75em;
+    z-index: 23;
+  }
+
+  .inners {
+    h1,
+    p {
+      width: fit-content;
+      margin-inline: auto;
+    }
+    h1 {
+      font-family: "bold";
+      font-size: 1.75em;
+      position: relative;
+      top: -3px;
+      line-height: 1;
+      margin-bottom: 0.65em;
+    }
+    p {
+      font-family: "medium";
+      color: hsl(0, 0%, 48%);
+    }
+  }
+  .btns {
+    margin-top: 2.4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .bookmark {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5em;
+    font-weight: 700;
+    font-size: 0.9em;
+    cursor: pointer;
+    color: hsl(0, 0%, 48%);
+    background: rgba(204, 204, 204, 0.329);
+    border-radius: 30px;
+    width: 175px;
+
+    p {
+      font-family: "medium";
+      padding-right: 1.3em;
+    }
+  }
+  .second {
+    padding-block: 3em;
+  }
+  .top {
+    .numbers {
+      .all {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3em;
+        margin-top: 2px;
+
+        .inner {
+          display: flex;
+          flex-direction: column;
+          gap: 0.9em;
+          &:not(:last-child) {
+            border-right: 1px solid rgba(130, 130, 130, 0.3);
+          }
+          h1 {
+            font-family: "bold";
+            color: #000;
+            font-size: 2em;
             line-height: 1;
-            margin-bottom:.65em;
+          }
+          p {
+            line-height: 1;
+            font-family: "regular";
+            font-size: 0.95em;
+          }
         }
-        p{
-            font-family: 'medium';
+      }
+      .range {
+        margin-top: 2.3em;
+        height: 13px;
+        border-radius: 20px;
+        width: 100%;
+        background: rgba(122, 122, 122, 0.1);
+        .Arange {
+          width: 78%;
+          background: hsl(176, 50%, 47%);
+          height: 100%;
+          border-radius: 20px;
         }
+      }
+    }
+  }
+  .third {
+    .center {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      h2 {
+        padding-top: 2.4em;
+        line-height: 1;
+        font-family: "bold";
+        font-size: 1.25em;
+      }
+      .ptop {
+        margin-top: 0.8em;
+      }
+      p {
+        font-family: "regular";
+        font-size: 1em;
+        line-height: 1.9;
+        color: hsl(0, 0%, 48%);
+      }
+      .pbot {
+        margin-top: 0.42em;
+      }
+      .divs {
+        margin-top: 0.9em;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+      }
+    }
+  }
+  #font {
+    font-size: 0.88em;
+    padding-block: 1.17em;
+  }
+  #font1 {
+    font-size: 0.85em;
+    padding-block: 1.2em;
+  }
+
+  .dark {
+    background-color: hsl(0, 0%, 48%);
+  }
+  @media screen and (max-width: 635px) {
+    .der {
+      padding-inline: 1.5em;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .der {
+      padding-inline: 1em;
+    }
+    .inners {
+      h1 {
+        font-size: 1.3em;
+        text-align: center;
+        width: 50%;
+      }
+      p {
+        text-align: center;
+        line-height: 2;
+        font-size: 1em;
+        width: 80%;
+      }
     }
     .btns{
-        margin-top:2.4em;
-        display:flex;
-        flex-direction:row;
-        justify-content: space-between;
+        width: fit-content;
+        gap:1em;
+        margin-inline: auto;
     }
     .bookmark{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 0.5em;
-        font-weight: 700;
-        font-size: 0.9em;
-        cursor: pointer;
-        color: hsl(0, 0%, 48%);
-        background: #ccc;
-        border-radius:30px;
-        width:175px;
-        
-       
-        p {
-            font-family: 'medium';
-            padding-right:1.7em;
-            
-        }
+        width: fit-content;
+        background: transparent;
+      p{
+          display:none;
+      }
     }
-    .second{
-        padding-block:3em;
-    }
-     .top{
-        
+    .top{
         .numbers{
-            
             .all{
-                display: grid;
-                grid-template-columns: repeat(3,1fr);
-                gap:3em;
-                
-
+                place-items:center;
+            grid-template-columns: 1fr;
             .inner{
-                display: flex;
-                flex-direction: column;
-                gap:1em;
-                &:not(:last-child){
-                    border-right:1px solid rgba(130, 130, 130,.3);
-                    
-                }
-                h1{
-                    font-family: 'bold';
-                    color:#000;
-                    font-size:2em;
-                    line-height: 1;
-                }
-                p{
-                    line-height: 1;
-                    font-family: 'regular';
-                    font-size: .95em;
-                }
+                padding-bottom: 2em;
+                 &:not(:last-child) {
+            border-right: 0px solid rgba(130, 130, 130, 0.3);
+            border-bottom: 1px solid rgba(130, 130, 130, 0.3);
+          }
             }
-            
-        }
-        .range{
-                margin-top:2.4em;
-                height:13px;
-                border-radius:20px;
-                width:100%;
-                background: rgba(122, 122, 122,.1);
-                .Arange{
-                    width:78%;
-                    background: hsl(176, 50%, 47%);
-                    height:100%;
-                    border-radius:20px;
-                }
-         }
-        }
-
-        
-    }
-    .third{
-        
-        .center{
-            display: flex;
-            flex-direction: column;
-            gap:1.5em;
-            h2{
-                padding-top:2.4em;
-                line-height: 1;
-                font-family: 'bold';
-                font-size:1.25em;
-            }
-            .ptop{
-                margin-top:.73em;
 
             }
-            p{
-                font-family: 'regular';
-                font-size:1em;
-                line-height: 1.9;
-                color: hsl(0, 0%, 48%);
-            }
-            .pbot{
-                margin-top:.42em;
-            }
-            .divs{
-                margin-top:.9em;
-                display: flex;
-                flex-direction: column;
-                gap:1.5em;
-              
-                   
-            }
         }
-    }
-      #font{
-        font-size: .88em;
-        padding-block: 1.17em;
     }
     #font1{
-        font-size: .85em;
-        padding-block: 1.2em;
+        font-size:.95em;
     }
- 
-    .dark{
-        background-color: hsl(0, 0%, 48%);
-      
-    }
-    
-    
+  }
 </style>

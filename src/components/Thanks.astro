@@ -1,65 +1,78 @@
 ---
 import Button from "../components/Button.astro";
+export interface Props {
+  id: string;
+}
+const { id } = Astro.props;
 ---
-<div class="modal">
-    <div class="modal-content">
+
+<div class="modalt" id={id}>
+  <div class="modal-content">
     <div class="tick">
-        <!-- <img src="" alt="icon check"> -->
+      <!-- <img src="" alt="icon check"> -->
     </div>
-        <h2>Thanks for your support!</h2>
-        <p> Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-        an email once our campaign is completed</p>
-        <Button id="center" class="" text="Got it!" />
-    </div>
+    <h2>Thanks for your support!</h2>
+    <p>
+      Your pledge brings us one step closer to sharing Mastercraft Bamboo
+      Monitor Riser worldwide. You will get an email once our campaign is
+      completed
+    </p>
+    <Button id="center" class="" text="Got it!" />
+  </div>
 </div>
+<script>
+
+</script>
 <style lang="scss" is:inline>
-
-   .modal-content{
-    background:#fff;
-    width:min(100%,34.2%);
-    border-radius:10px;
+  .modal-content {
+    background: #fff;
+    width: min(100%, 34.2%);
+    border-radius: 10px;
     display: grid;
-    position:absolute;
-    place-items:center;
-    gap:2em;
-    top:57.8%;
-    left:50%;
-    padding-block:3em;
-    transform: translate(-50%,0%);
-    .tick{
-        width:90px;
-        height:90px;
-        border-radius:50%;
-        background-image: url("../images/icon-check.svg");
-        margin-inline:auto;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100%;
-        margin-bottom:1.3em;
+    position: absolute;
+    place-items: center;
+    gap: 2em;
+    top: 50%;
+    left: 50%;
+    padding-block: 3em;
+    transform: translate(-50%, -50%);
+    margin-bottom: 5em;
 
+    .tick {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-image: url("../images/icon-check.svg");
+      margin-inline: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      margin-bottom: 1.3em;
     }
-    
-   }
-h2{
-    font-family:'bold';
-    line-height:1;
-    color:#000;
-    font-size:1.5em;
-}
-p{
-    color:hsl(0, 0%, 48%);
-    font-family:'regular';
-    width:min(100%,81%);
-    margin-top:-12px;
-    line-height:1.69;
-    margin-inline:auto;
+  }
+  .modal-content  h2 {
+    font-family: "bold";
+    line-height: 1;
+    color: #000;
+    font-size: 1.5em;
+  }
+  .modal-content  p {
+    color: hsl(0, 0%, 48%);
+    font-family: "regular";
+    width: min(100%, 81%);
+    margin-top: -12px;
+    line-height: 1.69;
+    margin-inline: auto;
     text-align: center;
-    margin-bottom:.45em;
-
-}
-#center{
-    font-size:.9em;
-    padding-block:1em;
-
-}
+    margin-bottom: 0.45em;
+  }
+  #center {
+    font-size: 0.9em;
+    padding-block: 1em;
+  }
+    @media screen and (max-width: 1200px) {
+    .modal-content {
+      width: min(100%, 75%);
+    }
+  }
 </style>
