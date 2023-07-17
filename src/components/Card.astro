@@ -45,15 +45,15 @@ const {
     width: min(100%, 90%);
     margin-inline: auto;
     padding: 2.4em 0 1.9em 0;
-
-    .bot,
-    .ontop {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
   }
+  .comm .bot,
+  .comm .ontop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .mid {
     margin-top: 1.7em;
     line-height: 1.9;
@@ -90,18 +90,17 @@ const {
   }
   @media screen and (min-width: 1000px) {
     .comm {
-    width: min(100%, 90%);
-    margin-inline: auto;
-    padding: 2.4em 0 1.9em 0;
-
-    .bot,
-    .ontop {
+      width: min(100%, 90%);
+      margin-inline: auto;
+      padding: 2.4em 0 1.9em 0;
+    }
+    .comm .bot,
+    .comm .ontop {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
     }
-  }
   }
   @media screen and (max-width: 480px) {
     .comm {
