@@ -14,7 +14,21 @@
                     <li><a href="">get started</a></li>
                 </ul>
             </nav>
+            <div class="ham"></div>
         </div>
     </div> 
 </header>
 <!-- we will add sass later on  -->
+<script>
+    let ham = document.querySelector(".ham")
+    let nav = document.querySelector("nav")                                 
+    let body = document.querySelector("body")                                 
+    let ul = document.querySelector("ul")                                 
+    ham.addEventListener("click", () => {
+        nav.classList.toggle("active")
+        ul.classList.toggle("active")
+        ham.classList.toggle("active")
+        body.classList.toggle("active")
+    })
+</script>
+
