@@ -438,4 +438,20 @@ hr {
     bottom:-200px;
   }
 }
+@media screen and (max-width:480px){
+  .low{
+    flex-direction:column;
+    gap:1em;
+    // margin-top: 3em;
+    .controls{
+      flex-direction:row;
+      gap:1em;
+      
+    }
+  }
+  hr{
+    margin-top:4em;
+  }
+  
+}
 </style>
