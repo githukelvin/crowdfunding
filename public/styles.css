@@ -119,7 +119,7 @@ ul li a {
 .modalt {
   display: none;
   position: fixed;
-  z-index: 999;
+  z-index: 99999;
   /* padding-top: 100px; Location of the box */
   inset: 0;
   width: 100%; /* Full width */

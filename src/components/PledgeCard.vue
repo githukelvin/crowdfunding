@@ -160,7 +160,7 @@ export default {
                     <h2>Black Edition Stand</h2>
                     <p>Pledge $75 or more</p>
                   </div>
-                  <h1>
+                  <h1 class="toprevers">
                     {{ left[1] }}
                     <span>left</span>
                   </h1>
@@ -456,6 +456,23 @@ hr {
     position:absolute;
     left:-3em;
     bottom:-180px;
+  }
+  
+}
+@media screen and (max-width:350px){
+      h1 {
+    position:absolute;
+    left:-3em;
+    bottom:-230px;
+  }
+  .toprevers{
+    position:absolute;
+    left:-3em;
+    bottom:-190px;
+  
+  }
+  .para{
+    line-height:1em;
   }
   
 }
